@@ -35,7 +35,7 @@ public class CreateEmployeeRequest {
     @NotNull(message = "Phone number is required")
     private String phone;
 
-    private LocalDate DoB;
+    private LocalDate dob;
 
     private String address;
 }

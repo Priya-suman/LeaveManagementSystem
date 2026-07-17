@@ -25,24 +25,18 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeService.createEmployee(employeeRequest));
     }
 
-    /*@GetMapping("/all")
-    public List<EmployeeResponse> getAllEmployees() {
-        return employeeServices.getAllEmployees();
-    }
-    @GetMapping("/{EmpIdy}")
-    public ResponseEntity<EmployeeResponse> getById(String EmpIdy) {
-        return ResponseEntity.ok(employeeServices.getById(EmpIdy));
+    @GetMapping
+    public ResponseEntity<List<EmployeeResponse>> getAllEmployees() {
+        return ResponseEntity.ok(employeeService.getAllEmployees());
     }
 
-    @GetMapping("/DoJ/{Doj}")
-    public ResponseEntity<EmployeeResponse> getByDoJ(@RequestParam LocalDate Doj) {
-        return ResponseEntity.ok(employeeServices.getByDoJ(Doj));
+    @GetMapping("/{id}")
+    public ResponseEntity<EmployeeResponse> getEmployeeById(@PathVariable int id) {
+        return ResponseEntity.ok(employeeService.getEmployeeById(id));
     }
 
-    @PostMapping("/save")
-    public ResponseEntity<EmployeeResponse> saveEmployee(@RequestBody EmployeeRequest employeeRequest) {
-        EmployeeResponse response = employeeServices.saveEmployee(employeeRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
-    }*/
-
+    @GetMapping("/{employeeCode}")
+    public ResponseEntity<EmployeeResponse> getById(@PathVariable String employeeCode) {
+        return ResponseEntity.ok(employeeService.getByEmployeeCode(employeeCode));
+    }
 }

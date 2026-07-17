@@ -1,5 +1,7 @@
 package com.leaveManagement.entity;
 
+import com.leaveManagement.dto.request.CreateEmployeeRequest;
+import com.leaveManagement.dto.request.EmployeeRequest;
 import com.leaveManagement.enums.EmployeeStatus;
 import com.leaveManagement.enums.Gender;
 import jakarta.persistence.*;
@@ -56,4 +58,20 @@ public class Employee {
 
     @Column(name="address")
     private String address;
+
+//    public static Builder builder() {
+//        return new Builder();
+//    }
+//
+//    public static class Builder {
+//        Employee employee= new Employee();
+//        public Builder employeeCode(String employeeCode) {
+//            employee.employeeCode = employeeCode;
+//            return this;
+//        }
+//
+//        public Employee build() {
+//            return employee;
+//        }
+//    }
 }

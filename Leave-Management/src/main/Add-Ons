@@ -1,2 +1,3 @@
 --In Employee table Gender can be Master Data and in Employee table we can Keep
 Abbreviations
+add validation on DoB -- should be less that DoJ and calculate age
