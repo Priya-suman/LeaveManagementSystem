@@ -1,3 +1,118 @@
 --In Employee table Gender can be Master Data and in Employee table we can Keep
 Abbreviations
 add validation on DoB -- should be less that DoJ and calculate age
+
+
+---In Employee update API
+UpdateEmpliyee DTO have no validation annotation since we are using it for multiple or single column data
+update so the validation need to be added
+-- we are checking for null in mapper class but it is only to map and update the Entity class data
+so the validation need to be added as part of project
+which can be anytype
+ex.
+1.Option 1: Manual Validation (What we're doing now)
+ if (request.getEmail() != null && request.getEmail().isBlank()) {
+       throw new BadRequestException("Email cannot be blank");
+   }
+
+   if (request.getEmployeeName() != null && request.getEmployeeName().isBlank()) {
+       throw new BadRequestException("Employee name cannot be blank");
+   }
+This is okay for 5–10 fields and helps you understand the flow.
+
+Option 2: Validation Groups (Common in Spring)
+
+Spring can validate only the fields that are present using validation groups.
+
+Example:
+
+@NotBlank(groups = Create.class)
+private String employeeName;
+
+This is more advanced, and we'll learn it later.
+
+Option 3: Separate Validator Class (Enterprise Choice) ⭐⭐⭐⭐⭐
+
+Create:
+
+validator
+    EmployeeValidator.java
+@Component
+public class EmployeeValidator {
+
+    public void validateUpdate(UpdateEmployeeRequest request) {
+
+        if (request.getEmail() != null && request.getEmail().isBlank()) {
+            throw new BadRequestException("Email cannot be blank");
+        }
+
+        // other validations...
+    }
+}
+
+Your service becomes:
+
+employeeValidator.validateUpdate(request);
+
+employeeMapper.updateEntity(request, employee);
+
+Much cleaner.
+
+Option 4: Jakarta Bean Validation + Custom Constraint (Best for large projects)
+
+This is what many enterprise applications use.
+
+You create custom annotations like:
+
+@ValidEmailIfPresent
+private String email;
+
+or
+
+@NotBlankIfPresent
+private String employeeName;
+
+Then Spring validates automatically.
+
+We'll cover this once you're comfortable with the basics.
+
+What would I do in a real company?
+
+If there are 20 fields:
+
+15 are simple validations (blank, length, email)
+5 are business validations (duplicate email, joining date, etc.)
+
+I'd split them.
+
+Bean Validation handles the simple rules.
+
+Service handles business rules.
+
+For our project
+
+Since you're learning, I don't want to introduce too much magic too early.
+
+We'll first build it manually so you understand why validation happens.
+
+Then I'll show you how Spring can remove 80% of the boilerplate.
+
+By the end, you'll appreciate the framework instead of just memorizing annotations.
+
+Here's a question for you
+
+Suppose the PATCH request is:
+
+{
+    "email": "abc@gmail.com"
+}
+
+Should Spring validate employeeName?
+
+Answer: No, because the client isn't trying to update it.
+
+This is exactly why PATCH validation is different from POST validation, and why we don't simply copy the create DTO annotations onto the update DTO. Understanding that distinction is more important than memorizing any specific validation technique.
+
+---Delete employee--- i have done just for practice(V.V.I)
+keep delete only for admin user and for HR implement
+activate employee, deactivate employee and Tern=minate employee also add notice DoR and DoS.

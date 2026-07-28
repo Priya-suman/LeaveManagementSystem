@@ -23,4 +23,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     boolean existsByOfficialEmail(@Email(message = "Invalid email format") @NotBlank(message = "Official email is required") String officialEmail);
 
     boolean existsByPhone(@NotNull(message = "Phone number is required") String phone);
+
+    void deleteByEmployeeCode(String employeeCode);
 }

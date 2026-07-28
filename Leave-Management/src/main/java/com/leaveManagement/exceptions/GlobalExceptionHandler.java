@@ -85,4 +85,26 @@ public class GlobalExceptionHandler {
                 .build();
         return ResponseEntity.badRequest().body(errorResponse);
     }
+
+    @ExceptionHandler(DesignationNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleDesignationNotFoundException(DesignationNotFoundException ex){
+        ErrorResponse error = ErrorResponse.builder()
+                .timestamp(LocalDateTime.now())
+                .statusCode(HttpStatus.NOT_FOUND.value())
+                .error(HttpStatus.NOT_FOUND.getReasonPhrase())
+                .message(ex.getMessage())
+                .build();
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    }
+
+    @ExceptionHandler(DuplicateDesignationException.class)
+    public ResponseEntity<ErrorResponse> handleDuplicateDesgnationException(DuplicateDesignationException ex){
+        ErrorResponse error = ErrorResponse.builder()
+                .timestamp(LocalDateTime.now())
+                .statusCode(HttpStatus.CONFLICT.value())
+                .error(HttpStatus.CONFLICT.getReasonPhrase())
+                .message(ex.getMessage())
+                .build();
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
+    }
 }

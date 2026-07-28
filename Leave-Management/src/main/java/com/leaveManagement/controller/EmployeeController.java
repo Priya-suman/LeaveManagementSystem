@@ -1,6 +1,7 @@
 package com.leaveManagement.controller;
 
 import com.leaveManagement.dto.request.CreateEmployeeRequest;
+import com.leaveManagement.dto.request.UpdateEmployeeRequest;
 import com.leaveManagement.dto.response.EmployeeResponse;
 import com.leaveManagement.services.EmployeeService;
 import jakarta.validation.Valid;
@@ -38,5 +39,16 @@ public class EmployeeController {
     @GetMapping("/{employeeCode}")
     public ResponseEntity<EmployeeResponse> getById(@PathVariable String employeeCode) {
         return ResponseEntity.ok(employeeService.getByEmployeeCode(employeeCode));
+    }
+
+    @PatchMapping("/update")
+    public ResponseEntity<EmployeeResponse> updateEmployee(@Valid @RequestBody UpdateEmployeeRequest employeeRequest) {
+        return ResponseEntity.ok(employeeService.updateEmployee(employeeRequest));
+    }
+
+    @DeleteMapping("/{employeeCode}")
+    public ResponseEntity<Void> deleteEmployee(@PathVariable String employeeCode) {
+        employeeService.deleteEmployee(employeeCode);
+        return ResponseEntity.ok().build();
     }
 }

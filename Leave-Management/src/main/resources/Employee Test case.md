@@ -31,7 +31,21 @@ Get All Employees
 ------------------------
 GET -> /app/v1/employees
 
+## Get All Employees
+
+- 200 OK
+- List of employees returned
+
+
 Get Employee by Employee Code
 ------------------------
 GET -> /app/v1/employees/{employeeCode}
 not found
+
+
+Patch Employee
+------------------
+Employee Code must be unique.
+Email must be unique.
+Mobile must be unique.
+if probation not null then confirmation recalculated or not.

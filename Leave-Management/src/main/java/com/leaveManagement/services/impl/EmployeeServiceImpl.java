@@ -1,6 +1,7 @@
 package com.leaveManagement.services.impl;
 
 import com.leaveManagement.dto.request.CreateEmployeeRequest;
+import com.leaveManagement.dto.request.UpdateEmployeeRequest;
 import com.leaveManagement.dto.response.EmployeeResponse;
 import com.leaveManagement.entity.Employee;
 import com.leaveManagement.enums.EmployeeStatus;
@@ -8,10 +9,13 @@ import com.leaveManagement.exceptions.DuplicateEmailException;
 import com.leaveManagement.exceptions.DuplicatePhoneNumberException;
 import com.leaveManagement.exceptions.EmployeeAlreadyExistsException;
 import com.leaveManagement.exceptions.EmployeeNotFoundException;
+import com.leaveManagement.mapper.EmployeeMapper;
 import com.leaveManagement.repository.EmployeeRepository;
 import com.leaveManagement.services.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,7 +26,7 @@ import java.util.Optional;
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
-
+    private final EmployeeMapper employeeMapper;
 
     @Override
     public EmployeeResponse createEmployee(CreateEmployeeRequest request) {
@@ -45,7 +49,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<EmployeeResponse> getAllEmployees() {
-        return employeeRepository.findAll().stream().map(this::buildEmployeeResponse).toList();
+//        List<Employee> allEmp =  employeeRepository.findAll();
+//        return allEmp.stream().map(p-> employeeMapper.toResponse(p)).toList();
+        return employeeRepository.findAll()
+                .stream()
+                .map(employeeMapper::toResponse)
+                .toList();
     }
 
     @Override
@@ -108,5 +117,39 @@ public class EmployeeServiceImpl implements EmployeeService {
                         .address(request.getAddress())
                         .build();
     }
+
+    @Override
+    public EmployeeResponse updateEmployee(UpdateEmployeeRequest request) {
+        Employee e = employeeRepository.findByEmployeeCode(request.getEmployeeCode())
+                .orElseThrow(() ->new EmployeeNotFoundException("Employee not found with employee code:" + request.getEmployeeCode()));
+        employeeMapper.updateEntity(request, e);
+        //Buisness Rule
+        updateDoConPatch(request, e);
+        if(request.getOfficial_email()!=null && employeeRepository.existsByOfficialEmail(request.getOfficial_email())){
+            throw new DuplicateEmailException("Employee already exists with email:" + request.getOfficial_email());
+        }
+        if(request.getPhone()!=null && employeeRepository.existsByPhone(request.getPhone())){
+            throw new DuplicatePhoneNumberException("Employee already exists with phone:" + request.getPhone());
+        }
+        employeeRepository.save(e);
+            return buildEmployeeResponse(e);
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void deleteEmployee(String employeeCode) {
+        employeeRepository.findByEmployeeCode(employeeCode)
+                .orElseThrow(() -> new EmployeeNotFoundException("Employee not found with employee code:" + employeeCode));
+        employeeRepository.deleteByEmployeeCode(employeeCode);
+    }
+
+
+    private static void updateDoConPatch(UpdateEmployeeRequest request, Employee e) {
+        if(request.getProbation_period() != null){
+            e.setDoC(e.getDoJ().plusMonths(request.getProbation_period()));
+        }
+    }
+
+
 
 }

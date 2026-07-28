@@ -1,7 +1,5 @@
 package com.leaveManagement.entity;
 
-import com.leaveManagement.dto.request.CreateEmployeeRequest;
-import com.leaveManagement.dto.request.EmployeeRequest;
 import com.leaveManagement.enums.EmployeeStatus;
 import com.leaveManagement.enums.Gender;
 import jakarta.persistence.*;
