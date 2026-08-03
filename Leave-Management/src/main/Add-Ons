@@ -116,3 +116,39 @@ This is exactly why PATCH validation is different from POST validation, and why 
 ---Delete employee--- i have done just for practice(V.V.I)
 keep delete only for admin user and for HR implement
 activate employee, deactivate employee and Tern=minate employee also add notice DoR and DoS.
+
+
+--*
+correct all response
+eg get all designatyion giving 500 internal server error when no record found,
+correct it to No Record Found OR No Designation master found.
+--corrected this was happening because of multiple Constructor injection annotation on Service Implementation class
+
+
+
+--*
+@RequiredArgsConstructor → creates a constructor for all final fields and @NonNull fields.
+@AllArgsConstructor → creates a constructor for all fields.
+
+For Spring service dependency injection, @RequiredArgsConstructor is generally the better choice.
+
+Also make sure you don't have a manually written constructor like this in addition to @RequiredArgsConstructor:
+so define only one constructor annotation.
+
+
+---*
+update designation should be based on id completely since we can update the name as well as descriptiopn
+
+
+--*
+Designation Master
+find on Designation name should be EqualIgnoreCase.
+
+
+----*discussion
+when i fetch employee i should get latest designation
+and when i handle designation master i don't need to know employee designation table anything.
+
+refresh the knowledge on mapping
+join columns will be in employee designation
+

@@ -1,10 +1,217 @@
-2026-07-28T00:04:54.223+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m27s224ms).
-2026-07-28T01:27:31.293+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m37s69ms).
-2026-07-28T03:09:05.970+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h41m34s677ms).
-2026-07-28T04:32:14.159+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m8s190ms).
-2026-07-28T06:09:24.563+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h37m10s404ms).
-2026-07-28T07:03:13.065+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m48s502ms).
-2026-07-28T07:50:03.771+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m50s706ms).
-2026-07-28T08:38:07.783+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m4s12ms).
-2026-07-28T09:00:08.240+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m373ms).
-2026-07-28T09:00:37.959+05:30  WARN 30909 --- [Leave-Management] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s719ms), soft-evicting connections from pool.
+2026-08-03T06:52:15.714+05:30  INFO 34589 --- [Leave-Management] [restartedMain] c.l.LeaveManagementApplication           : Starting LeaveManagementApplication using Java 21.0.7 with PID 34589 (/Users/Spring-ProjectWithPK/LeaveManagementSystem/Leave-Management/target/classes started by priyasuman in /Users/Spring-ProjectWithPK/LeaveManagementSystem/Leave-Management)
+2026-08-03T06:52:15.717+05:30  INFO 34589 --- [Leave-Management] [restartedMain] c.l.LeaveManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T06:52:15.741+05:30  INFO 34589 --- [Leave-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-03T06:52:15.741+05:30  INFO 34589 --- [Leave-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-03T06:52:16.061+05:30  INFO 34589 --- [Leave-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T06:52:16.083+05:30  INFO 34589 --- [Leave-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-08-03T06:52:16.280+05:30  INFO 34589 --- [Leave-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-03T06:52:16.288+05:30  INFO 34589 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T06:52:16.288+05:30  INFO 34589 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-03T06:52:16.305+05:30  INFO 34589 --- [Leave-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 564 ms
+2026-08-03T06:52:16.373+05:30  INFO 34589 --- [Leave-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T06:52:16.394+05:30  INFO 34589 --- [Leave-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-03T06:52:16.550+05:30  INFO 34589 --- [Leave-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T06:52:16.562+05:30  INFO 34589 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T06:52:16.660+05:30  INFO 34589 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67e57d73
+2026-08-03T06:52:16.660+05:30  INFO 34589 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-03T06:52:16.674+05:30  WARN 34589 --- [Leave-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-03T06:52:16.683+05:30  INFO 34589 --- [Leave-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.3
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-03T06:52:16.748+05:30 ERROR 34589 --- [Leave-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+2026-08-03T06:52:16.749+05:30  WARN 34589 --- [Leave-Management] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+2026-08-03T06:52:16.749+05:30  INFO 34589 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-03T06:52:16.751+05:30  INFO 34589 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-03T06:52:16.752+05:30  INFO 34589 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-03T06:52:16.758+05:30  INFO 34589 --- [Leave-Management] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-03T06:52:16.765+05:30 ERROR 34589 --- [Leave-Management] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.leaveManagement.LeaveManagementApplication.main(LeaveManagementApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.hibernate.MappingException: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.recommendedJdbcType(InferredBasicValueResolver.java:256) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.from(InferredBasicValueResolver.java:162) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.resolution(BasicValue.java:670) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.buildResolution(BasicValue.java:475) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.buildResolution(BasicValue.java:449) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:366) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:356) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.lambda$processValueResolvers$0(InFlightMetadataCollectorImpl.java:1758) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1765) ~[na:na]
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1743) ~[na:na]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processValueResolvers(InFlightMetadataCollectorImpl.java:1758) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1747) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.coordinateProcessors(MetadataBuildingProcess.java:361) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:209) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 18 common frames omitted
+Caused by: org.hibernate.type.descriptor.java.spi.JdbcTypeRecommendationException: Could not determine recommended JdbcType for Java type 'com.leaveManagement.entity.Designation'
+	at org.hibernate.type.descriptor.java.spi.UnknownBasicJavaType.getRecommendedJdbcType(UnknownBasicJavaType.java:60) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.recommendedJdbcType(InferredBasicValueResolver.java:250) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	... 41 common frames omitted
+
+2026-08-03T06:52:39.291+05:30  INFO 34624 --- [Leave-Management] [restartedMain] c.l.LeaveManagementApplication           : Starting LeaveManagementApplication using Java 21.0.7 with PID 34624 (/Users/Spring-ProjectWithPK/LeaveManagementSystem/Leave-Management/target/classes started by priyasuman in /Users/Spring-ProjectWithPK/LeaveManagementSystem/Leave-Management)
+2026-08-03T06:52:39.292+05:30  INFO 34624 --- [Leave-Management] [restartedMain] c.l.LeaveManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T06:52:39.314+05:30  INFO 34624 --- [Leave-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-03T06:52:39.314+05:30  INFO 34624 --- [Leave-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-03T06:52:39.600+05:30  INFO 34624 --- [Leave-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T06:52:39.620+05:30  INFO 34624 --- [Leave-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-08-03T06:52:39.801+05:30  INFO 34624 --- [Leave-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-03T06:52:39.809+05:30  INFO 34624 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T06:52:39.809+05:30  INFO 34624 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-03T06:52:39.827+05:30  INFO 34624 --- [Leave-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 513 ms
+2026-08-03T06:52:39.901+05:30  INFO 34624 --- [Leave-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T06:52:39.922+05:30  INFO 34624 --- [Leave-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-03T06:52:40.081+05:30  INFO 34624 --- [Leave-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T06:52:40.096+05:30  INFO 34624 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T06:52:40.179+05:30  INFO 34624 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d000ae1
+2026-08-03T06:52:40.179+05:30  INFO 34624 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-03T06:52:40.193+05:30  WARN 34624 --- [Leave-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-03T06:52:40.203+05:30  INFO 34624 --- [Leave-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.3
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-03T06:52:40.273+05:30 ERROR 34624 --- [Leave-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+2026-08-03T06:52:40.273+05:30  WARN 34624 --- [Leave-Management] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+2026-08-03T06:52:40.274+05:30  INFO 34624 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-03T06:52:40.276+05:30  INFO 34624 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-03T06:52:40.278+05:30  INFO 34624 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-03T06:52:40.285+05:30  INFO 34624 --- [Leave-Management] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-03T06:52:40.293+05:30 ERROR 34624 --- [Leave-Management] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.leaveManagement.LeaveManagementApplication.main(LeaveManagementApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.hibernate.MappingException: Incorrect use of entity type 'com.leaveManagement.entity.Designation' (possibly due to missing association mapping annotation)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.recommendedJdbcType(InferredBasicValueResolver.java:256) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.from(InferredBasicValueResolver.java:162) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.resolution(BasicValue.java:670) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.buildResolution(BasicValue.java:475) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.buildResolution(BasicValue.java:449) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:366) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:356) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.lambda$processValueResolvers$0(InFlightMetadataCollectorImpl.java:1758) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1765) ~[na:na]
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1743) ~[na:na]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processValueResolvers(InFlightMetadataCollectorImpl.java:1758) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1747) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.coordinateProcessors(MetadataBuildingProcess.java:361) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:209) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 18 common frames omitted
+Caused by: org.hibernate.type.descriptor.java.spi.JdbcTypeRecommendationException: Could not determine recommended JdbcType for Java type 'com.leaveManagement.entity.Designation'
+	at org.hibernate.type.descriptor.java.spi.UnknownBasicJavaType.getRecommendedJdbcType(UnknownBasicJavaType.java:60) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.recommendedJdbcType(InferredBasicValueResolver.java:250) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	... 41 common frames omitted
+
+2026-08-03T07:44:53.702+05:30  INFO 36816 --- [Leave-Management] [restartedMain] c.l.LeaveManagementApplication           : Starting LeaveManagementApplication using Java 21.0.7 with PID 36816 (/Users/Spring-ProjectWithPK/LeaveManagementSystem/Leave-Management/target/classes started by priyasuman in /Users/Spring-ProjectWithPK/LeaveManagementSystem/Leave-Management)
+2026-08-03T07:44:53.706+05:30  INFO 36816 --- [Leave-Management] [restartedMain] c.l.LeaveManagementApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T07:44:53.727+05:30  INFO 36816 --- [Leave-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-03T07:44:53.727+05:30  INFO 36816 --- [Leave-Management] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-03T07:44:54.055+05:30  INFO 36816 --- [Leave-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T07:44:54.077+05:30  INFO 36816 --- [Leave-Management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2026-08-03T07:44:54.283+05:30  INFO 36816 --- [Leave-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-03T07:44:54.291+05:30  INFO 36816 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T07:44:54.291+05:30  INFO 36816 --- [Leave-Management] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-03T07:44:54.308+05:30  INFO 36816 --- [Leave-Management] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 581 ms
+2026-08-03T07:44:54.382+05:30  INFO 36816 --- [Leave-Management] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T07:44:54.403+05:30  INFO 36816 --- [Leave-Management] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-03T07:44:54.563+05:30  INFO 36816 --- [Leave-Management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T07:44:54.577+05:30  INFO 36816 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T07:44:54.679+05:30  INFO 36816 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11fc17ad
+2026-08-03T07:44:54.679+05:30  INFO 36816 --- [Leave-Management] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-03T07:44:54.694+05:30  WARN 36816 --- [Leave-Management] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-03T07:44:54.703+05:30  INFO 36816 --- [Leave-Management] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.3
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-03T07:44:55.119+05:30  INFO 36816 --- [Leave-Management] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-03T07:44:55.165+05:30  INFO 36816 --- [Leave-Management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-03T07:44:55.197+05:30  INFO 36816 --- [Leave-Management] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-03T07:44:55.345+05:30  WARN 36816 --- [Leave-Management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-03T07:44:55.539+05:30  INFO 36816 --- [Leave-Management] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-03T07:44:55.543+05:30  INFO 36816 --- [Leave-Management] [restartedMain] c.l.LeaveManagementApplication           : Started LeaveManagementApplication in 2.065 seconds (process running for 2.303)
+2026-08-03T07:44:55.544+05:30  WARN 36816 --- [Leave-Management] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-03T07:44:55.544+05:30  WARN 36816 --- [Leave-Management] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'

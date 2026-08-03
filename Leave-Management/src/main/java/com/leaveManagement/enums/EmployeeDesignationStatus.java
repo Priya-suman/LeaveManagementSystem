@@ -1,6 +1,6 @@
 package com.leaveManagement.enums;
 
-public enum DesinationStatus {
+public enum EmployeeDesignationStatus {
     ACTIVE,
     INACTIVE
 }

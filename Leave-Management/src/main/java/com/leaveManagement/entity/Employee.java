@@ -57,6 +57,8 @@ public class Employee {
     @Column(name="address")
     private String address;
 
+    @OneToOne(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private EmployeeDesignation employeeDesignation;
 //    public static Builder builder() {
 //        return new Builder();
 //    }

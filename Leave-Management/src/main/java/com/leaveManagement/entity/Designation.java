@@ -26,4 +26,7 @@ public class Designation {
     @Enumerated(EnumType.STRING)
     private DesinationStatus status;
 
+    public void setActive(boolean b) {
+        this.status = b ? DesinationStatus.ACTIVE : DesinationStatus.INACTIVE;
+    }
 }

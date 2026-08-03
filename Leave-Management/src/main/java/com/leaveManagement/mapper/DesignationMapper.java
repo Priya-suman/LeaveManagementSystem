@@ -1,6 +1,7 @@
 package com.leaveManagement.mapper;
 
 import com.leaveManagement.dto.request.CreateDesignationRequest;
+import com.leaveManagement.dto.request.UpdateDesignationRequest;
 import com.leaveManagement.dto.response.DesignationResponse;
 import com.leaveManagement.entity.Designation;
 import com.leaveManagement.enums.DesinationStatus;
@@ -23,4 +24,15 @@ public class DesignationMapper {
                 status(designation.getStatus()).
                 build();
     }
+
+    public static void updateEntity(UpdateDesignationRequest request, Designation designation){
+        if(request.getName() != null){
+            designation.setName(request.getName());
+        }
+        if(request.getDescription() != null){
+            designation.setDescription(request.getDescription());
+        }
+    }
+
+
 }
