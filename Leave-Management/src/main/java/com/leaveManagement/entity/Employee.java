@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name="employee")
@@ -57,8 +58,8 @@ public class Employee {
     @Column(name="address")
     private String address;
 
-    @OneToOne(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private EmployeeDesignation employeeDesignation;
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<EmployeeDesignation> employeeDesignation;
 //    public static Builder builder() {
 //        return new Builder();
 //    }

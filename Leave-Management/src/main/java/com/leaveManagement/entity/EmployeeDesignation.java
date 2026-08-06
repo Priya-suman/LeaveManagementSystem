@@ -3,10 +3,16 @@ package com.leaveManagement.entity;
 import com.leaveManagement.enums.DesinationStatus;
 import com.leaveManagement.enums.EmployeeDesignationStatus;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 
+@Getter
+@Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class EmployeeDesignation {
 
     @Id
