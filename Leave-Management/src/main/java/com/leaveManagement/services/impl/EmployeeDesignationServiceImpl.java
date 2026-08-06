@@ -26,7 +26,7 @@ public class EmployeeDesignationServiceImpl implements EmployeeDesignationServic
         Employee employee = employeeRepository.findByEmployeeCode(employeecode).orElseThrow(() -> new EmployeeNotFoundException("Employee not found by emplpyee code :" + employeecode));
         List<EmployeeDesignation> allByEmployee = employeeDesignationRepository.findAllByEmployee(employee);
 
-        /*convert EmployeeDesignation list to lost of EmployeeDesignationResponse*/
+        /*convert EmployeeDesignation list to lost of EmployeeDesignationResponse...*/
         List<EmployeeDesignationResponse> collect = allByEmployee.stream().map(ed -> employeeDesignationMapper.toResponse(ed)).collect(Collectors.toList());
         return collect;
     }
